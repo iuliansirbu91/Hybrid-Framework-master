@@ -1,16 +1,18 @@
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
- 
+import java.io.PrintStream;
+
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JTextPane;
 
-import com.totsy.UI.JLabel;
-import com.totsy.UI.JScrollPane;
-import com.totsy.UI.PrintStream;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+
 import com.totsy.logs.TextAreaOutputStream;
 
 import javax.swing.JTextArea;
@@ -49,6 +51,7 @@ public class FrameworkUI {
   private void initialize() {
     frame = new JFrame();
     frame.setBounds(100, 100, 450, 300);
+    frame.add( new JLabel(" Outout" ), BorderLayout.NORTH );
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.getContentPane().setLayout(null);
          
@@ -64,6 +67,7 @@ public class FrameworkUI {
     JTextArea textArea = new JTextArea();
     textArea.setBounds(10, 119, 414, 131);
     frame.getContentPane().add(textArea);
+    
     
     
    
@@ -104,7 +108,7 @@ public class ApplicationUI {
 	
 	public void porneste() throws InterruptedException  {
     JFrame frame = new JFrame();
-    frame.add( new JLabel(" Outout" ), BorderLayout.NORTH );
+    
 
     JTextArea ta = new JTextArea();
     TextAreaOutputStream taos = new TextAreaOutputStream( ta, 60 );

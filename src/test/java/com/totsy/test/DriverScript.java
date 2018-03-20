@@ -18,6 +18,7 @@ import javax.swing.JTextArea;
 import org.apache.log4j.Logger;
 
 import com.totsy.UI.ApplicationUI;
+import com.totsy.UI.AutoDev;
 import com.totsy.logs.TextAreaOutputStream;
 import com.totsy.xls.read.Xls_Reader;
 
@@ -80,8 +81,8 @@ public class DriverScript {
 
     public void start() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException{
         // initialize the app logs
-    	ApplicationUI ta = new ApplicationUI();
-    	ta.porneste();
+    	AutoDev ta = new AutoDev();
+    	ta.main();
         
         APP_LOGS = Logger.getLogger("devpinoyLogger");
         APP_LOGS.debug("Hello");

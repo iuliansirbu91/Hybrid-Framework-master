@@ -20,16 +20,22 @@ public class AutoDev {
 
 	  private JFrame frame;
 	  private JTextField txtPath;
-
+	  private JTextArea textArea;
+	  public static JTextArea ta;
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					AutoDev window = new AutoDev();
 					window.frame.setVisible(true);
+				
+					 TextAreaOutputStream taos = new TextAreaOutputStream( ta, 60 );
+					    PrintStream ps = new PrintStream( taos );
+					    System.setOut( ps );
+					    System.setErr( ps );
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -48,27 +54,12 @@ public class AutoDev {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		    frame = new JFrame();
-		    frame.getContentPane().add( new JLabel(" Output" ), BorderLayout.NORTH );
+		  frame = new JFrame();
 		    frame.setBounds(100, 100, 450, 300);
+		    frame.getContentPane().add( new JLabel(" Output" ), BorderLayout.NORTH );
 		    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		   // frame.getContentPane().setLayout(null);
-		    
-		    JTextArea ta = new JTextArea();
-		    TextAreaOutputStream taos = new TextAreaOutputStream( ta, 60 );
-		    PrintStream ps = new PrintStream( taos );
-		    System.setOut( ps );
-		    System.setErr( ps );
-
-
-		    frame.getContentPane().add( new JScrollPane( ta )  );
-
-		    frame.pack();
-		    frame.setVisible( true );
-		    frame.setSize(446,374);
-		    
-		    
-		    
+		    frame.getContentPane().setLayout(null);
+		         
 		    txtPath = new JTextField();
 		    txtPath.setBounds(10, 10, 414, 21);
 		    frame.getContentPane().add(txtPath);
@@ -78,10 +69,21 @@ public class AutoDev {
 		    btnBrowse.setBounds(10, 41, 87, 23);
 		    frame.getContentPane().add(btnBrowse);
 		    
-		    JTextArea textArea = new JTextArea();
-		    textArea.setBounds(10, 119, 414, 131);
+		    textArea = new JTextArea();
+		    textArea.setBounds(10, 91, 414, 159);
 		    frame.getContentPane().add(textArea);
 		    
+
+  
+		   
+		   
+
+
+		    frame.add( new JScrollPane( ta )  );
+
+		//    frame.pack();
+		    frame.setVisible( true );
+		 //   frame.setSize(800,600);
 		    		    
 		    btnBrowse.addActionListener(new ActionListener() {
 		        public void actionPerformed(ActionEvent e) {
