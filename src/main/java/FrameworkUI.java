@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JTextPane;
+import javax.swing.JTextArea;
  
 public class FrameworkUI {
  
@@ -54,9 +55,11 @@ public class FrameworkUI {
     btnBrowse.setBounds(10, 41, 87, 23);
     frame.getContentPane().add(btnBrowse);
     
-    JTextPane textPane = new JTextPane();
-    textPane.setBounds(35, 103, 368, 121);
-    frame.getContentPane().add(textPane);
+    JTextArea textArea = new JTextArea();
+    textArea.setBounds(10, 119, 414, 131);
+    frame.getContentPane().add(textArea);
+    
+   
          
     btnBrowse.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {

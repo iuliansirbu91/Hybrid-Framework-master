@@ -1,14 +1,24 @@
 package com.totsy.test;
 
+
+import java.awt.BorderLayout;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Properties;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 import org.apache.log4j.Logger;
 
+import com.totsy.UI.ApplicationUI;
+import com.totsy.logs.TextAreaOutputStream;
 import com.totsy.xls.read.Xls_Reader;
 
 public class DriverScript {
@@ -46,7 +56,7 @@ public class DriverScript {
         capturescreenShot_method =keywords.getClass().getMethod("captureScreenshot",String.class,String.class);
     }
 
-    public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException, NoSuchMethodException, SecurityException {
+    public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException, NoSuchMethodException, SecurityException, InterruptedException {
         FileInputStream fs = new FileInputStream("src/test/java/com/totsy/config/config.properties");
         CONFIG= new Properties();
         CONFIG.load(fs);
@@ -59,13 +69,20 @@ public class DriverScript {
         //System.out.println(OR.getProperty("name"));
 
 
+
+        
+        
+        
         DriverScript test = new DriverScript();
         test.start();
     }
 
 
-    public void start() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException{
+    public void start() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException{
         // initialize the app logs
+    	ApplicationUI ta = new ApplicationUI();
+    	ta.porneste();
+        
         APP_LOGS = Logger.getLogger("devpinoyLogger");
         APP_LOGS.debug("Hello");
         APP_LOGS.debug("Properties loaded. Starting testing");

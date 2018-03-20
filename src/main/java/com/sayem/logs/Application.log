@@ -1,41 +1,41 @@
-03/12/2018 23:14:46 DEBUG devpinoyLogger:70 - Hello
-03/12/2018 23:14:46 DEBUG devpinoyLogger:71 - Properties loaded. Starting testing
-03/12/2018 23:14:46 DEBUG devpinoyLogger:77 - Intialize Suite xlsx
-03/12/2018 23:14:46 DEBUG devpinoyLogger:83 - Check out -- Y
-03/12/2018 23:14:46 DEBUG devpinoyLogger:88 - ******Executing the Suite******Check out
-03/12/2018 23:14:46 DEBUG devpinoyLogger:92 - ShoppingCart -- Y
-03/12/2018 23:14:46 DEBUG devpinoyLogger:96 - Executing the test case -> ShoppingCart
-03/12/2018 23:14:46 DEBUG devpinoyLogger:102 - Iteration number 1
-03/12/2018 23:14:46 DEBUG devpinoyLogger:144 - openBrowser
-03/12/2018 23:14:46 DEBUG devpinoyLogger:43 - Opening browser
-03/12/2018 23:14:51 DEBUG devpinoyLogger:152 - PASS
-03/12/2018 23:14:51 DEBUG devpinoyLogger:144 - navigate
-03/12/2018 23:14:51 DEBUG devpinoyLogger:62 - Navigating to URL
-03/12/2018 23:14:54 DEBUG devpinoyLogger:152 - PASS
-03/12/2018 23:14:54 DEBUG devpinoyLogger:144 - writeInInputCss
-03/12/2018 23:14:54 DEBUG devpinoyLogger:345 - Writing in text box
-03/12/2018 23:14:54 DEBUG devpinoyLogger:152 - PASS
-03/12/2018 23:14:54 DEBUG devpinoyLogger:144 - writeInInputCss
-03/12/2018 23:14:54 DEBUG devpinoyLogger:345 - Writing in text box
-03/12/2018 23:14:55 DEBUG devpinoyLogger:152 - PASS
-03/12/2018 23:14:55 DEBUG devpinoyLogger:144 - clickButtonCss
-03/12/2018 23:14:55 DEBUG devpinoyLogger:134 - Clicking on Button
-03/12/2018 23:15:04 DEBUG devpinoyLogger:152 - PASS
-03/12/2018 23:15:04 DEBUG devpinoyLogger:144 - pause
-03/12/2018 23:15:14 DEBUG devpinoyLogger:152 - PASS
-03/12/2018 23:15:14 DEBUG devpinoyLogger:144 - pause
-03/12/2018 23:15:27 DEBUG devpinoyLogger:152 - PASS
-03/12/2018 23:15:27 DEBUG devpinoyLogger:144 - clickButton
-03/12/2018 23:15:27 DEBUG devpinoyLogger:122 - Clicking on Button
-03/12/2018 23:15:27 DEBUG devpinoyLogger:152 - PASS
-03/12/2018 23:15:27 DEBUG devpinoyLogger:144 - pause
-03/12/2018 23:15:32 DEBUG devpinoyLogger:152 - PASS
-03/12/2018 23:15:32 DEBUG devpinoyLogger:144 - clickButton
-03/12/2018 23:15:32 DEBUG devpinoyLogger:122 - Clicking on Button
-03/12/2018 23:15:32 DEBUG devpinoyLogger:152 - PASS
-03/12/2018 23:15:32 DEBUG devpinoyLogger:144 - agencyDropListClick
-03/12/2018 23:15:32 DEBUG devpinoyLogger:526 - Selecting Agency from dropdown
-03/12/2018 23:15:52 DEBUG devpinoyLogger:152 - FAIL - Could not select Agency from list. no such element: Unable to locate element: {"method":"css selector","selector":"#header-agency-listBox > span > span.k-select > span"}
+03/21/2018 00:35:40 DEBUG devpinoyLogger:87 - Hello
+03/21/2018 00:35:40 DEBUG devpinoyLogger:88 - Properties loaded. Starting testing
+03/21/2018 00:35:40 DEBUG devpinoyLogger:94 - Intialize Suite xlsx
+03/21/2018 00:35:41 DEBUG devpinoyLogger:100 - Check out -- Y
+03/21/2018 00:35:41 DEBUG devpinoyLogger:105 - ******Executing the Suite******Check out
+03/21/2018 00:35:41 DEBUG devpinoyLogger:109 - ShoppingCart -- Y
+03/21/2018 00:35:41 DEBUG devpinoyLogger:113 - Executing the test case -> ShoppingCart
+03/21/2018 00:35:41 DEBUG devpinoyLogger:119 - Iteration number 1
+03/21/2018 00:35:41 DEBUG devpinoyLogger:161 - openBrowser
+03/21/2018 00:35:41 DEBUG devpinoyLogger:43 - Opening browser
+03/21/2018 00:35:44 DEBUG devpinoyLogger:169 - PASS
+03/21/2018 00:35:44 DEBUG devpinoyLogger:161 - navigate
+03/21/2018 00:35:44 DEBUG devpinoyLogger:62 - Navigating to URL
+03/21/2018 00:35:48 DEBUG devpinoyLogger:169 - PASS
+03/21/2018 00:35:48 DEBUG devpinoyLogger:161 - writeInInputCss
+03/21/2018 00:35:48 DEBUG devpinoyLogger:345 - Writing in text box
+03/21/2018 00:35:48 DEBUG devpinoyLogger:169 - PASS
+03/21/2018 00:35:48 DEBUG devpinoyLogger:161 - writeInInputCss
+03/21/2018 00:35:48 DEBUG devpinoyLogger:345 - Writing in text box
+03/21/2018 00:35:48 DEBUG devpinoyLogger:169 - PASS
+03/21/2018 00:35:48 DEBUG devpinoyLogger:161 - clickButtonCss
+03/21/2018 00:35:48 DEBUG devpinoyLogger:134 - Clicking on Button
+03/21/2018 00:35:51 DEBUG devpinoyLogger:169 - PASS
+03/21/2018 00:35:51 DEBUG devpinoyLogger:161 - pause
+03/21/2018 00:36:01 DEBUG devpinoyLogger:169 - PASS
+03/21/2018 00:36:01 DEBUG devpinoyLogger:161 - pause
+03/21/2018 00:36:16 DEBUG devpinoyLogger:169 - PASS
+03/21/2018 00:36:16 DEBUG devpinoyLogger:161 - clickButton
+03/21/2018 00:36:16 DEBUG devpinoyLogger:122 - Clicking on Button
+03/21/2018 00:36:17 DEBUG devpinoyLogger:169 - PASS
+03/21/2018 00:36:17 DEBUG devpinoyLogger:161 - pause
+03/21/2018 00:36:22 DEBUG devpinoyLogger:169 - PASS
+03/21/2018 00:36:22 DEBUG devpinoyLogger:161 - clickButton
+03/21/2018 00:36:22 DEBUG devpinoyLogger:122 - Clicking on Button
+03/21/2018 00:36:22 DEBUG devpinoyLogger:169 - PASS
+03/21/2018 00:36:22 DEBUG devpinoyLogger:161 - agencyDropListClick
+03/21/2018 00:36:22 DEBUG devpinoyLogger:526 - Selecting Agency from dropdown
+03/21/2018 00:36:42 DEBUG devpinoyLogger:169 - FAIL - Could not select Agency from list. no such element: Unable to locate element: {"method":"css selector","selector":"#header-agency-listBox > span > span.k-select > span"}
   (Session info: chrome=64.0.3282.186)
   (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -44,46 +44,44 @@ Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:28.40
 System info: host: 'DESKTOP-J8SME32', ip: '192.168.100.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\Users\Iulian\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.186, webStorageEnabled: true}
-Session ID: b2427f6b95d8bcb23838bdd3bd21aeba
+Session ID: 54a8f162a8f804c64d4a09a66658c76e
 *** Element info: {Using=css selector, value=#header-agency-listBox > span > span.k-select > span}
-03/12/2018 23:15:52 DEBUG devpinoyLogger:144 - pause
-03/12/2018 23:15:57 DEBUG devpinoyLogger:152 - PASS
-03/12/2018 23:15:57 DEBUG devpinoyLogger:144 - advertiserDropListClick
-03/12/2018 23:15:57 DEBUG devpinoyLogger:564 - Selecting Advertiser from dropdown
-03/12/2018 23:15:58 DEBUG devpinoyLogger:584 - selecting sanitarium element met2
-03/12/2018 23:16:18 DEBUG devpinoyLogger:152 - FAILUnable to select sanit advno such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='header-advertiser_listbox']/li[text()[contains(.,'SANITARIUM')]]"}
+03/21/2018 00:36:42 DEBUG devpinoyLogger:161 - pause
+03/21/2018 00:36:47 DEBUG devpinoyLogger:169 - PASS
+03/21/2018 00:36:47 DEBUG devpinoyLogger:161 - advertiserDropListClick
+03/21/2018 00:36:47 DEBUG devpinoyLogger:564 - Selecting Advertiser from dropdown
+03/21/2018 00:36:47 DEBUG devpinoyLogger:584 - selecting sanitarium element met2
+03/21/2018 00:36:52 DEBUG devpinoyLogger:169 - FAILUnable to select sanit advelement not visible
   (Session info: chrome=64.0.3282.186)
   (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:28.403Z'
 System info: host: 'DESKTOP-J8SME32', ip: '192.168.100.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\Users\Iulian\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.186, webStorageEnabled: true}
-Session ID: b2427f6b95d8bcb23838bdd3bd21aeba
-*** Element info: {Using=xpath, value=//ul[@id='header-advertiser_listbox']/li[text()[contains(.,'SANITARIUM')]]}
-03/12/2018 23:16:19 DEBUG devpinoyLogger:102 - Iteration number 2
-03/12/2018 23:16:20 DEBUG devpinoyLogger:102 - Iteration number 3
-03/12/2018 23:16:21 DEBUG devpinoyLogger:102 - Iteration number 4
-03/12/2018 23:16:22 DEBUG devpinoyLogger:102 - Iteration number 5
-03/12/2018 23:16:23 DEBUG devpinoyLogger:102 - Iteration number 6
-03/12/2018 23:16:24 DEBUG devpinoyLogger:102 - Iteration number 7
-03/12/2018 23:16:25 DEBUG devpinoyLogger:102 - Iteration number 8
-03/12/2018 23:16:25 DEBUG devpinoyLogger:102 - Iteration number 9
-03/12/2018 23:16:26 DEBUG devpinoyLogger:102 - Iteration number 10
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - RemoveItem -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - CartQTY -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - Coupon -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - ContinueShopping -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - ShppingAddress -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - BillingAddress -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - Checkout -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - Payment -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - EditYourCart -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - OrderConfirm -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - OrderConfirmEmail -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:92 - OrderCancelEmail -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:83 - Links verification -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:83 - Login functionality -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:83 - My Account -- N
-03/12/2018 23:16:27 DEBUG devpinoyLogger:83 - Sales pages -- N
+Session ID: 54a8f162a8f804c64d4a09a66658c76e
+03/21/2018 00:36:54 DEBUG devpinoyLogger:119 - Iteration number 2
+03/21/2018 00:36:55 DEBUG devpinoyLogger:119 - Iteration number 3
+03/21/2018 00:36:56 DEBUG devpinoyLogger:119 - Iteration number 4
+03/21/2018 00:36:57 DEBUG devpinoyLogger:119 - Iteration number 5
+03/21/2018 00:36:58 DEBUG devpinoyLogger:119 - Iteration number 6
+03/21/2018 00:36:58 DEBUG devpinoyLogger:119 - Iteration number 7
+03/21/2018 00:36:59 DEBUG devpinoyLogger:119 - Iteration number 8
+03/21/2018 00:37:00 DEBUG devpinoyLogger:119 - Iteration number 9
+03/21/2018 00:37:01 DEBUG devpinoyLogger:119 - Iteration number 10
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - RemoveItem -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - CartQTY -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - Coupon -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - ContinueShopping -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - ShppingAddress -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - BillingAddress -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - Checkout -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - Payment -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - EditYourCart -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - OrderConfirm -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - OrderConfirmEmail -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:109 - OrderCancelEmail -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:100 - Links verification -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:100 - Login functionality -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:100 - My Account -- N
+03/21/2018 00:37:01 DEBUG devpinoyLogger:100 - Sales pages -- N
