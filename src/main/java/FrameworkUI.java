@@ -7,6 +7,12 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JTextPane;
+
+import com.totsy.UI.JLabel;
+import com.totsy.UI.JScrollPane;
+import com.totsy.UI.PrintStream;
+import com.totsy.logs.TextAreaOutputStream;
+
 import javax.swing.JTextArea;
  
 public class FrameworkUI {
@@ -59,6 +65,7 @@ public class FrameworkUI {
     textArea.setBounds(10, 119, 414, 131);
     frame.getContentPane().add(textArea);
     
+    
    
          
     btnBrowse.addActionListener(new ActionListener() {
@@ -87,4 +94,31 @@ public class FrameworkUI {
       }
     });
   }
+}
+
+
+
+
+public class ApplicationUI { 
+	
+	
+	public void porneste() throws InterruptedException  {
+    JFrame frame = new JFrame();
+    frame.add( new JLabel(" Outout" ), BorderLayout.NORTH );
+
+    JTextArea ta = new JTextArea();
+    TextAreaOutputStream taos = new TextAreaOutputStream( ta, 60 );
+    PrintStream ps = new PrintStream( taos );
+    System.setOut( ps );
+    System.setErr( ps );
+
+
+    frame.add( new JScrollPane( ta )  );
+
+    frame.pack();
+    frame.setVisible( true );
+    frame.setSize(800,600);
+    }
+
+	
 }
