@@ -1,0 +1,14 @@
+package portalDRPCIV;
+
+import javax.swing.JFrame;
+
+public class apples {
+	
+	public static void main (String[] args) {
+		alerte bucky = new alerte();
+		bucky.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		bucky.setSize(275,180);
+		bucky.setVisible(true);
+	}
+
+}
