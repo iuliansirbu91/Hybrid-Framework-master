@@ -1,24 +1,60 @@
-03/21/2018 01:16:02 DEBUG devpinoyLogger:88 - Hello
-03/21/2018 01:16:02 DEBUG devpinoyLogger:89 - Properties loaded. Starting testing
-03/21/2018 01:16:02 DEBUG devpinoyLogger:95 - Intialize Suite xlsx
-03/21/2018 01:16:02 DEBUG devpinoyLogger:101 - Check out -- Y
-03/21/2018 01:16:02 DEBUG devpinoyLogger:106 - ******Executing the Suite******Check out
-03/21/2018 01:16:02 DEBUG devpinoyLogger:110 - ShoppingCart -- Y
-03/21/2018 01:16:02 DEBUG devpinoyLogger:114 - Executing the test case -> ShoppingCart
-03/21/2018 01:16:02 DEBUG devpinoyLogger:120 - Iteration number 1
-03/21/2018 01:16:02 DEBUG devpinoyLogger:162 - openBrowser
-03/21/2018 01:16:02 DEBUG devpinoyLogger:43 - Opening browser
-03/21/2018 01:16:06 DEBUG devpinoyLogger:170 - PASS
-03/21/2018 01:16:06 DEBUG devpinoyLogger:162 - navigate
-03/21/2018 01:16:06 DEBUG devpinoyLogger:62 - Navigating to URL
-03/21/2018 01:16:09 DEBUG devpinoyLogger:170 - PASS
-03/21/2018 01:16:09 DEBUG devpinoyLogger:162 - writeInInputCss
-03/21/2018 01:16:09 DEBUG devpinoyLogger:345 - Writing in text box
-03/21/2018 01:16:10 DEBUG devpinoyLogger:170 - PASS
-03/21/2018 01:16:10 DEBUG devpinoyLogger:162 - writeInInputCss
-03/21/2018 01:16:10 DEBUG devpinoyLogger:345 - Writing in text box
-03/21/2018 01:16:10 DEBUG devpinoyLogger:170 - PASS
-03/21/2018 01:16:10 DEBUG devpinoyLogger:162 - clickButtonCss
-03/21/2018 01:16:10 DEBUG devpinoyLogger:134 - Clicking on Button
-03/21/2018 01:16:13 DEBUG devpinoyLogger:170 - PASS
-03/21/2018 01:16:13 DEBUG devpinoyLogger:162 - pause
+03/16/2018 14:49:34 DEBUG devpinoyLogger:71 - Hello
+03/16/2018 14:49:34 DEBUG devpinoyLogger:72 - Properties loaded. Starting testing
+03/16/2018 14:49:34 DEBUG devpinoyLogger:78 - Intialize Suite xlsx
+03/16/2018 14:49:35 DEBUG devpinoyLogger:84 - Alerte -- Y
+03/16/2018 14:49:35 DEBUG devpinoyLogger:89 - ******Executing the Suite******Alerte
+03/16/2018 14:49:35 DEBUG devpinoyLogger:93 - Adauga -- Y
+03/16/2018 14:49:35 DEBUG devpinoyLogger:97 - Executing the test case -> Adauga
+03/16/2018 14:49:35 DEBUG devpinoyLogger:149 - openBrowser
+03/16/2018 14:49:35 DEBUG devpinoyLogger:40 - Opening browser
+03/16/2018 14:49:39 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:39 DEBUG devpinoyLogger:149 - navigate
+03/16/2018 14:49:39 DEBUG devpinoyLogger:56 - Navigating to URL
+03/16/2018 14:49:40 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:40 DEBUG devpinoyLogger:149 - writeInInput
+03/16/2018 14:49:40 DEBUG devpinoyLogger:326 - Writing in text box
+03/16/2018 14:49:41 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:41 DEBUG devpinoyLogger:149 - writeInInput
+03/16/2018 14:49:41 DEBUG devpinoyLogger:326 - Writing in text box
+03/16/2018 14:49:43 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:43 DEBUG devpinoyLogger:149 - clickButton
+03/16/2018 14:49:43 DEBUG devpinoyLogger:116 - Clicking on Button
+03/16/2018 14:49:43 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:43 DEBUG devpinoyLogger:149 - clickButtonCss
+03/16/2018 14:49:43 DEBUG devpinoyLogger:128 - Clicking on Button
+03/16/2018 14:49:43 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:43 DEBUG devpinoyLogger:149 - clickButtonCss
+03/16/2018 14:49:43 DEBUG devpinoyLogger:128 - Clicking on Button
+03/16/2018 14:49:43 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:43 DEBUG devpinoyLogger:149 - clickButtonCss
+03/16/2018 14:49:43 DEBUG devpinoyLogger:128 - Clicking on Button
+03/16/2018 14:49:43 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:43 DEBUG devpinoyLogger:149 - writeInInput
+03/16/2018 14:49:43 DEBUG devpinoyLogger:326 - Writing in text box
+03/16/2018 14:49:44 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:44 DEBUG devpinoyLogger:149 - writeInInput
+03/16/2018 14:49:44 DEBUG devpinoyLogger:326 - Writing in text box
+03/16/2018 14:49:46 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:46 DEBUG devpinoyLogger:149 - clearAndInputText
+03/16/2018 14:49:46 DEBUG devpinoyLogger:926 - Clearing input text box
+03/16/2018 14:49:47 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:47 DEBUG devpinoyLogger:149 - clearAndInputText
+03/16/2018 14:49:47 DEBUG devpinoyLogger:926 - Clearing input text box
+03/16/2018 14:49:48 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:48 DEBUG devpinoyLogger:149 - clearAndInputText
+03/16/2018 14:49:48 DEBUG devpinoyLogger:926 - Clearing input text box
+03/16/2018 14:49:49 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:49 DEBUG devpinoyLogger:149 - clearAndInputText
+03/16/2018 14:49:49 DEBUG devpinoyLogger:926 - Clearing input text box
+03/16/2018 14:49:51 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:51 DEBUG devpinoyLogger:149 - clearAndInputText
+03/16/2018 14:49:51 DEBUG devpinoyLogger:926 - Clearing input text box
+03/16/2018 14:49:52 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:52 DEBUG devpinoyLogger:149 - clearAndInputText
+03/16/2018 14:49:52 DEBUG devpinoyLogger:926 - Clearing input text box
+03/16/2018 14:49:53 DEBUG devpinoyLogger:157 - PASS
+03/16/2018 14:49:55 DEBUG devpinoyLogger:93 - Editare -- N
+03/16/2018 14:49:55 DEBUG devpinoyLogger:84 - Stiri -- N
+03/16/2018 14:49:55 DEBUG devpinoyLogger:84 -  -- 
+03/16/2018 14:49:55 DEBUG devpinoyLogger:84 -  -- 
+03/16/2018 14:49:55 DEBUG devpinoyLogger:84 -  -- 

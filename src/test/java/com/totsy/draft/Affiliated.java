@@ -5,19 +5,13 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Affiliated {
 
 	public static void main(String[] args) {
 
-		String driverPath = "C:\\\\Users\\Ilie\\Documents\\SeleniumLibs\\chromedriver_win32\\";
-		System.out.println("launching chrome browser"); 
-		System.setProperty("webdriver.chrome.driver", driverPath+"chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		
-		
+		WebDriver driver = new FirefoxDriver();		
 		driver.navigate().to("https://staging.totsy.com/a/yellowhammer");
 		driver.manage().timeouts().implicitlyWait(60L, TimeUnit.SECONDS);
 		

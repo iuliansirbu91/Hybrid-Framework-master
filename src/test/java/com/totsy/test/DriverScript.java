@@ -1,25 +1,14 @@
 package com.totsy.test;
 
-
-import java.awt.BorderLayout;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-
 import org.apache.log4j.Logger;
 
-import com.totsy.UI.ApplicationUI;
-import com.totsy.UI.AutoDev;
-import com.totsy.logs.TextAreaOutputStream;
 import com.totsy.xls.read.Xls_Reader;
 
 public class DriverScript {
@@ -50,6 +39,7 @@ public class DriverScript {
     // properties
     public static Properties CONFIG;
     public static Properties OR;
+   // public static Properties TEXT;
 
     public DriverScript() throws NoSuchMethodException, SecurityException{
         keywords = new Keywords();
@@ -57,7 +47,7 @@ public class DriverScript {
         capturescreenShot_method =keywords.getClass().getMethod("captureScreenshot",String.class,String.class);
     }
 
-    public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException, NoSuchMethodException, SecurityException, InterruptedException {
+    public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException, NoSuchMethodException, SecurityException {
         FileInputStream fs = new FileInputStream("src/test/java/com/totsy/config/config.properties");
         CONFIG= new Properties();
         CONFIG.load(fs);
@@ -70,20 +60,13 @@ public class DriverScript {
         //System.out.println(OR.getProperty("name"));
 
 
-
-        
-        
-        
         DriverScript test = new DriverScript();
         test.start();
     }
 
 
-    public void start() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException{
+    public void start() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException{
         // initialize the app logs
-    	AutoDev ta = new AutoDev();
-    	ta.main();
-        
         APP_LOGS = Logger.getLogger("devpinoyLogger");
         APP_LOGS.debug("Hello");
         APP_LOGS.debug("Properties loaded. Starting testing");
@@ -153,10 +136,14 @@ public class DriverScript {
                 }else if(data.startsWith(Constants.CONFIG)){
                     //read actual data value from config.properties
                     data=CONFIG.getProperty(data.split(Constants.DATA_SPLIT)[1]);
+                }else if(data.startsWith(Constants.TEXT)){
+                    //read the text from t
+                	data=data.split(Constants.DATA_SPLIT)[1];
                 }else{
                     //by default read actual data value from or.properties
                     data=OR.getProperty(data);
                 }
+                
                 object=currentTestSuiteXLS.getCellData(Constants.TEST_STEPS_SHEET, Constants.OBJECT,currentTestStepID  );
                 currentKeyword=currentTestSuiteXLS.getCellData(Constants.TEST_STEPS_SHEET, Constants.KEYWORD, currentTestStepID);
                 APP_LOGS.debug(currentKeyword);

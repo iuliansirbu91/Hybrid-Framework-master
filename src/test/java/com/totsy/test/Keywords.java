@@ -2,11 +2,9 @@ package com.totsy.test;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,9 +26,8 @@ public class Keywords {
     public String openBrowser(String object,String data){
 
         // Chrome Driver Path
-
-            System.setProperty("webdriver.chrome.driver", "ChromeDriver\\chromedriver.exe");
-          
+    	System.setProperty("webdriver.chrome.driver","C:\\Users\\isirbu\\eclipse-workspace\\Hybrid-Framework-master\\ChromeDriver\\chromedriver.exe");
+           
 
 
 
@@ -45,13 +42,10 @@ public class Keywords {
             driver=new FirefoxDriver();
         else if(data.equals("IE"))
             driver=new InternetExplorerDriver();
-        else if(data.equals("Chrome")){
-      	
-        	driver=new ChromeDriver();
-        	driver.manage().window().maximize();
-           
+        else if(data.equals("Chrome")) {
+        	 
+            driver=new ChromeDriver();
         }
-
         long implicitWaitTime=Long.parseLong(CONFIG.getProperty("implicitwait"));
         driver.manage().timeouts().implicitlyWait(implicitWaitTime, TimeUnit.SECONDS);
         return Constants.KEYWORD_PASS;
@@ -333,6 +327,7 @@ public class Keywords {
 
         try{
             driver.findElement(By.xpath(OR.getProperty(object))).sendKeys(data);
+            Thread.sleep(1000L);
         }catch(Exception e){
             return Constants.KEYWORD_FAIL+" Unable to write "+e.getMessage();
 
@@ -346,6 +341,7 @@ public class Keywords {
 
         try{
             driver.findElement(By.cssSelector(OR.getProperty(object))).sendKeys(data);
+            Thread.sleep(1000L);
         }catch(Exception e){
             return Constants.KEYWORD_FAIL+" Unable to write "+e.getMessage();
 
@@ -415,6 +411,7 @@ public class Keywords {
         APP_LOGS.debug("Clicking on any element");
         try{
             driver.findElement(By.xpath(OR.getProperty(object))).click();
+            Thread.sleep(1000L);
         }catch(Exception e){
             return Constants.KEYWORD_FAIL+" Not able to click";
         }
@@ -425,6 +422,7 @@ public class Keywords {
         APP_LOGS.debug("Clicking on any element");
         try{
             driver.findElement(By.cssSelector(OR.getProperty(object))).click();
+            Thread.sleep(1000L);
         }catch(Exception e){
             return Constants.KEYWORD_FAIL+" Not able to click";
         }
@@ -506,7 +504,7 @@ public class Keywords {
 
 
     /************************APPLICATION SPECIFIC KEYWORDS********************************/
-    public  String agencyDropList(String object, String data){
+    public  String myAccountDropList(String object, String data){
         APP_LOGS.debug("Selecting Random Color");
         try {
             WebElement myAccountDropList = driver.findElement(By.cssSelector("#userAccount"));
@@ -521,86 +519,6 @@ public class Keywords {
         return Constants.KEYWORD_PASS;
     }
 
-    
-    public  String agencyDropListClick(String object, String data){
-        APP_LOGS.debug("Selecting Agency from dropdown");
-        try {
-        	
-        	driver.findElement(By.cssSelector(OR.getProperty(object))).click();
-        	driver.findElement(By.cssSelector("#header-agency-list > span > input")).sendKeys(data);
-        	
-          int start=0;
-            int time=10;
-            try{
-                while(time == start){
-                    if(driver.findElements(By.id("header-agency_listbox")).size() == 0){
-                    	 APP_LOGS.debug("waiting for dd to load");
-                        Thread.sleep(1000L);
-                        start++;
-                    }else{
-                    	break;                       
-                    }
-                }
-             
-                APP_LOGS.debug("selecting carat element met2");
-                driver.findElement(By.xpath("//ul[@class='k-list k-reset k-virtual-list']/li[text()[contains(.,'CARAT AUSTRALIA MEDIA SERVICES')]]")).click(); 
-                           
-            }catch(Exception e){
-                return Constants.KEYWORD_FAIL+"Unable to select carat agency"+e.getMessage();
-            }
-            
-
-        	       	  	
-        }catch(Exception e){
-            return Constants.KEYWORD_FAIL +" - Could not select Agency from list. "+ e.getMessage();
-
-        }
-       
-        return Constants.KEYWORD_PASS;
-    }
- 
-    
-    public  String advertiserDropListClick(String object, String data){
-        APP_LOGS.debug("Selecting Advertiser from dropdown");
-        try {
-        	
-        	driver.findElement(By.cssSelector(OR.getProperty(object))).click();
-        	driver.findElement(By.cssSelector("#header-advertiser-list > span > input")).sendKeys(data);
-        	
-          int start=0;
-          int time=10;
-            try{
-                while(time == start){
-                    if(driver.findElements(By.xpath("//ul[@id='header-advertiser_listbox']/li[text()[contains(.,'SANITARIUM')]]")).size() == 0){
-                    	 APP_LOGS.debug("waiting for dd to load");
-                        Thread.sleep(1000L);
-                        start++;
-                    }else{
-                    	APP_LOGS.debug("cica-i incarcata");
-                    	break;                       
-                    }
-                }
-             
-                APP_LOGS.debug("selecting sanitarium element met2");
-                driver.findElement(By.xpath("//ul[@id='header-advertiser_listbox']/li[text()[contains(.,'SANITARIUM')]]")).click(); 
-              //*[@id="b0065ef9-5284-45b6-bd85-5443c5ddbe20"]
-              //*[@id="header-advertiser_listbox"]/li[333]
-                           
-            }catch(Exception e){
-                return Constants.KEYWORD_FAIL+"Unable to select sanit adv"+e.getMessage();
-            }
-            
-
-        	       	  	
-        }catch(Exception e){
-            return Constants.KEYWORD_FAIL +" - Could not select Adv from list. "+ e.getMessage();
-
-        }
-       
-        return Constants.KEYWORD_PASS;
-    }
-    
-    
 
     public  String selectCreditCard(String object, String data){
         APP_LOGS.debug("Selecting Credit Card");
@@ -1001,6 +919,26 @@ public class Keywords {
 
         }
         return Constants.KEYWORD_PASS;
+
+    }
+    
+    public  String clearAndInputText(String object,String data){
+        APP_LOGS.debug("Clearing input text box");
+
+        try{
+        	//driver.findElement(By.xpath(OR.getProperty(object))).click();
+        	driver.findElement(By.xpath(OR.getProperty(object))).clear();
+        	//driver.findElement(By.xpath(OR.getProperty(object))).sendKeys(Keys.BACK_SPACE);
+            driver.findElement(By.xpath(OR.getProperty(object))).sendKeys(data);
+            driver.findElement(By.xpath(OR.getProperty(object))).sendKeys(Keys.RETURN);
+           // driver.findElement(By.xpath(OR.getProperty(object))).click();
+            Thread.sleep(1000L);
+        }catch(Exception e){
+            return Constants.KEYWORD_FAIL+" Unable to clear input text "+e.getMessage();
+
+        }
+        return Constants.KEYWORD_PASS;
+        
 
     }
 
