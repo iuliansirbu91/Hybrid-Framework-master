@@ -24,6 +24,7 @@ public class Constants {
     public static String CONFIG="config";
     public static final String SUITE_ID = "TSID";
     public static final String DESCRIPTION = "Description";
+    public static String TEXT="text";
 
 
 }
