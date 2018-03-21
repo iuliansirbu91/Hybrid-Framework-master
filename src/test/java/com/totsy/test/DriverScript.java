@@ -48,7 +48,8 @@ public class DriverScript {
     public static String object;
 
     // properties
-
+    public static Properties CONFIG;
+    public static Properties OR;
 
     public DriverScript() throws NoSuchMethodException, SecurityException{
         keywords = new Keywords();
@@ -68,8 +69,12 @@ public class DriverScript {
 
     public void start(String suite) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException{
         // initialize the app logs
-    	ApplicationUI config = ApplicationUI();
-    	config
+    	ApplicationUI cfg = new ApplicationUI();
+    	CONFIG = cfg.getConfig();
+    	
+    	ApplicationUI gui = new ApplicationUI();
+    	OR = gui.getConfig();
+    	  
         
         APP_LOGS = Logger.getLogger("devpinoyLogger");
         APP_LOGS.debug("Hello");
@@ -144,6 +149,7 @@ public class DriverScript {
                     //read actual data value from config.properties
                 	APP_LOGS.debug("verificare TCID " + data.split(Constants.DATA_SPLIT)[1]);
                     data=CONFIG.getProperty(data.split(Constants.DATA_SPLIT)[1]);
+                    APP_LOGS.debug(data);
                 }else{
                     //by default read actual data value from or.properties
                     data=OR.getProperty(data);

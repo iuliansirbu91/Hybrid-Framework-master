@@ -1,18 +1,12 @@
-03/21/2018 23:51:12 DEBUG devpinoyLogger:75 - Hello
-03/21/2018 23:51:12 DEBUG devpinoyLogger:76 - Properties loaded. Starting testing
-03/21/2018 23:51:12 DEBUG devpinoyLogger:82 - Intialize Suite xlsx
-03/21/2018 23:51:13 DEBUG devpinoyLogger:88 - Check out -- Y
-03/21/2018 23:51:13 DEBUG devpinoyLogger:93 - ******Executing the Suite******Check out
-03/21/2018 23:51:13 DEBUG devpinoyLogger:97 - ShoppingCart -- Y
-03/21/2018 23:51:13 DEBUG devpinoyLogger:101 - Executing the test case -> ShoppingCart
-03/21/2018 23:51:13 DEBUG devpinoyLogger:107 - Iteration number 1
-03/21/2018 23:51:13 DEBUG devpinoyLogger:143 - verificare TCID browserType
-03/21/2018 23:52:51 DEBUG devpinoyLogger:75 - Hello
-03/21/2018 23:52:51 DEBUG devpinoyLogger:76 - Properties loaded. Starting testing
-03/21/2018 23:52:51 DEBUG devpinoyLogger:82 - Intialize Suite xlsx
-03/21/2018 23:52:51 DEBUG devpinoyLogger:88 - Check out -- Y
-03/21/2018 23:52:51 DEBUG devpinoyLogger:93 - ******Executing the Suite******Check out
-03/21/2018 23:52:51 DEBUG devpinoyLogger:97 - ShoppingCart -- Y
-03/21/2018 23:52:51 DEBUG devpinoyLogger:101 - Executing the test case -> ShoppingCart
-03/21/2018 23:52:51 DEBUG devpinoyLogger:107 - Iteration number 1
-03/21/2018 23:52:51 DEBUG devpinoyLogger:143 - verificare TCID browserType
+03/22/2018 00:15:03 DEBUG devpinoyLogger:80 - Hello
+03/22/2018 00:15:03 DEBUG devpinoyLogger:81 - Properties loaded. Starting testing
+03/22/2018 00:15:03 DEBUG devpinoyLogger:87 - Intialize Suite xlsx
+03/22/2018 00:15:04 DEBUG devpinoyLogger:93 - Check out -- Y
+03/22/2018 00:15:04 DEBUG devpinoyLogger:98 - ******Executing the Suite******Check out
+03/22/2018 00:15:04 DEBUG devpinoyLogger:102 - ShoppingCart -- Y
+03/22/2018 00:15:04 DEBUG devpinoyLogger:106 - Executing the test case -> ShoppingCart
+03/22/2018 00:15:04 DEBUG devpinoyLogger:112 - Iteration number 1
+03/22/2018 00:15:04 DEBUG devpinoyLogger:150 - verificare TCID browserType
+03/22/2018 00:15:04 DEBUG devpinoyLogger:152 - 
+03/22/2018 00:15:04 DEBUG devpinoyLogger:159 - openBrowser
+03/22/2018 00:15:04 DEBUG devpinoyLogger:43 - Opening browser

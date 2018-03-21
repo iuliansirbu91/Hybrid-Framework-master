@@ -55,7 +55,7 @@ public class ApplicationUI extends JFrame{
 		browse1.setBounds(22, 11, 67, 23);
 		browse1.addActionListener(handler);
 		
-		item1 = new JTextField("Please select SUITE file");
+		item1 = new JTextField("C:\\Users\\Iulian\\Documents\\xls");
 		item1.setBounds(131, 12, 166, 20);
 		item1.setEditable(false);
 		item1.addActionListener(handler);
@@ -64,7 +64,7 @@ public class ApplicationUI extends JFrame{
 		browse2.setBounds(22, 45, 67, 23);
 		browse2.addActionListener(handler);
 	
-	item2 = new JTextField("Please select GUI file",20);
+	item2 = new JTextField("C:\\Users\\Iulian\\Documents\\xls\\or.properties");
 	item2.setBounds(131, 46, 166, 20);
 	item2.setEditable(false);
 	getContentPane().setLayout(null);
@@ -78,7 +78,7 @@ public class ApplicationUI extends JFrame{
 	browse3.addActionListener(handler);
 	getContentPane().add(browse3);
 	
-	item3 = new JTextField("Please select CONFIG file", 20);
+	item3 = new JTextField("C:\\Users\\Iulian\\Documents\\xls\\config.properties");
 	item3.setBounds(131, 82, 166, 20);
 	item3.setEditable(false);
 	getContentPane().add(item3);
@@ -95,6 +95,16 @@ public class ApplicationUI extends JFrame{
 //	passwordField.addActionListener(handler);
 	
 	}
+	
+	public Properties getConfig()
+		{
+		    return CONFIG;
+	}
+
+	public Properties getGui()
+	{
+	    return OR;
+}
 	
 	private class thehandler implements ActionListener {
 	
