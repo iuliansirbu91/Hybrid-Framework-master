@@ -48,8 +48,7 @@ public class DriverScript {
     public static String object;
 
     // properties
-    public static Properties CONFIG;
-    public static Properties OR;
+
 
     public DriverScript() throws NoSuchMethodException, SecurityException{
         keywords = new Keywords();
@@ -57,32 +56,20 @@ public class DriverScript {
         capturescreenShot_method =keywords.getClass().getMethod("captureScreenshot",String.class,String.class);
     }
 
-    public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException, NoSuchMethodException, SecurityException, InterruptedException {
-        FileInputStream fs = new FileInputStream("src/test/java/com/totsy/config/config.properties");
-        CONFIG= new Properties();
-        CONFIG.load(fs);
-
-        fs = new FileInputStream("src/test/java/com/totsy/config/or.properties");
-        OR= new Properties();
-        OR.load(fs);
-
-        //System.out.println(CONFIG.getProperty("testsiteURL"));
-        //System.out.println(OR.getProperty("name"));
-
-
-
+    public void run(String[] args) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InterruptedException  {
+        
         
         
         
         DriverScript test = new DriverScript();
-        test.start();
+    //    test.start(data);
     }
 
 
-    public void start() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException{
+    public void start(String suite) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException{
         // initialize the app logs
-    	AutoDev ta = new AutoDev();
-    	ta.main();
+    	ApplicationUI config = ApplicationUI();
+    	config
         
         APP_LOGS = Logger.getLogger("devpinoyLogger");
         APP_LOGS.debug("Hello");
@@ -93,7 +80,7 @@ public class DriverScript {
         // 4) Execute Keywords as many times as
         // number of data sets - set to Y
         APP_LOGS.debug("Intialize Suite xlsx");
-        suiteXLS = new Xls_Reader("src/test/java/com/totsy/xls/Suite.xlsx");
+        suiteXLS = new Xls_Reader(suite+"/suite.xlsx");
 
 
         for(currentSuiteID=2;currentSuiteID<=suiteXLS.getRowCount(Constants.TEST_SUITE_SHEET);currentSuiteID++){
@@ -104,7 +91,7 @@ public class DriverScript {
             if(suiteXLS.getCellData(Constants.TEST_SUITE_SHEET, Constants.RUNMODE, currentSuiteID).equals(Constants.RUNMODE_YES)){
                 // execute the test cases in the suite
                 APP_LOGS.debug("******Executing the Suite******"+suiteXLS.getCellData(Constants.TEST_SUITE_SHEET, Constants.Test_Suite_ID, currentSuiteID));
-                currentTestSuiteXLS=new Xls_Reader("src/test/java/com/totsy/xls/"+currentTestSuite+".xlsx");
+                currentTestSuiteXLS=new Xls_Reader(suite+"/"+currentTestSuite+".xlsx");
                 // iterate through all the test cases in the suite
                 for(currentTestCaseID=2;currentTestCaseID<=currentTestSuiteXLS.getRowCount("Test Cases");currentTestCaseID++){
                     APP_LOGS.debug(currentTestSuiteXLS.getCellData(Constants.TEST_CASES_SHEET, Constants.TCID, currentTestCaseID)+" -- "+currentTestSuiteXLS.getCellData("Test Cases", "Runmode", currentTestCaseID));
@@ -142,16 +129,20 @@ public class DriverScript {
 
     public void executeKeywords() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
         // iterating through all keywords
-        for(currentTestStepID=2;currentTestStepID<=currentTestSuiteXLS.getRowCount(Constants.TEST_STEPS_SHEET);currentTestStepID++){
+    	
+    	
+    	for(currentTestStepID=2;currentTestStepID<=currentTestSuiteXLS.getRowCount(Constants.TEST_STEPS_SHEET);currentTestStepID++){
             // checking TCID
+        	//APP_LOGS.debug("verificare TCID " + currentTestStepID);
             if(currentTestCaseName.equals(currentTestSuiteXLS.getCellData(Constants.TEST_STEPS_SHEET, Constants.TCID, currentTestStepID))){
-
+            	
                 data=currentTestSuiteXLS.getCellData(Constants.TEST_STEPS_SHEET, Constants.DATA,currentTestStepID  );
                 if(data.startsWith(Constants.DATA_START_COL)){
                     // read actual data value from the corresponding column
                     data=currentTestSuiteXLS.getCellData(currentTestCaseName, data.split(Constants.DATA_SPLIT)[1] ,currentTestDataSetID );
                 }else if(data.startsWith(Constants.CONFIG)){
                     //read actual data value from config.properties
+                	APP_LOGS.debug("verificare TCID " + data.split(Constants.DATA_SPLIT)[1]);
                     data=CONFIG.getProperty(data.split(Constants.DATA_SPLIT)[1]);
                 }else{
                     //by default read actual data value from or.properties

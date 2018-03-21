@@ -1,24 +1,18 @@
-03/21/2018 01:16:02 DEBUG devpinoyLogger:88 - Hello
-03/21/2018 01:16:02 DEBUG devpinoyLogger:89 - Properties loaded. Starting testing
-03/21/2018 01:16:02 DEBUG devpinoyLogger:95 - Intialize Suite xlsx
-03/21/2018 01:16:02 DEBUG devpinoyLogger:101 - Check out -- Y
-03/21/2018 01:16:02 DEBUG devpinoyLogger:106 - ******Executing the Suite******Check out
-03/21/2018 01:16:02 DEBUG devpinoyLogger:110 - ShoppingCart -- Y
-03/21/2018 01:16:02 DEBUG devpinoyLogger:114 - Executing the test case -> ShoppingCart
-03/21/2018 01:16:02 DEBUG devpinoyLogger:120 - Iteration number 1
-03/21/2018 01:16:02 DEBUG devpinoyLogger:162 - openBrowser
-03/21/2018 01:16:02 DEBUG devpinoyLogger:43 - Opening browser
-03/21/2018 01:16:06 DEBUG devpinoyLogger:170 - PASS
-03/21/2018 01:16:06 DEBUG devpinoyLogger:162 - navigate
-03/21/2018 01:16:06 DEBUG devpinoyLogger:62 - Navigating to URL
-03/21/2018 01:16:09 DEBUG devpinoyLogger:170 - PASS
-03/21/2018 01:16:09 DEBUG devpinoyLogger:162 - writeInInputCss
-03/21/2018 01:16:09 DEBUG devpinoyLogger:345 - Writing in text box
-03/21/2018 01:16:10 DEBUG devpinoyLogger:170 - PASS
-03/21/2018 01:16:10 DEBUG devpinoyLogger:162 - writeInInputCss
-03/21/2018 01:16:10 DEBUG devpinoyLogger:345 - Writing in text box
-03/21/2018 01:16:10 DEBUG devpinoyLogger:170 - PASS
-03/21/2018 01:16:10 DEBUG devpinoyLogger:162 - clickButtonCss
-03/21/2018 01:16:10 DEBUG devpinoyLogger:134 - Clicking on Button
-03/21/2018 01:16:13 DEBUG devpinoyLogger:170 - PASS
-03/21/2018 01:16:13 DEBUG devpinoyLogger:162 - pause
+03/21/2018 23:51:12 DEBUG devpinoyLogger:75 - Hello
+03/21/2018 23:51:12 DEBUG devpinoyLogger:76 - Properties loaded. Starting testing
+03/21/2018 23:51:12 DEBUG devpinoyLogger:82 - Intialize Suite xlsx
+03/21/2018 23:51:13 DEBUG devpinoyLogger:88 - Check out -- Y
+03/21/2018 23:51:13 DEBUG devpinoyLogger:93 - ******Executing the Suite******Check out
+03/21/2018 23:51:13 DEBUG devpinoyLogger:97 - ShoppingCart -- Y
+03/21/2018 23:51:13 DEBUG devpinoyLogger:101 - Executing the test case -> ShoppingCart
+03/21/2018 23:51:13 DEBUG devpinoyLogger:107 - Iteration number 1
+03/21/2018 23:51:13 DEBUG devpinoyLogger:143 - verificare TCID browserType
+03/21/2018 23:52:51 DEBUG devpinoyLogger:75 - Hello
+03/21/2018 23:52:51 DEBUG devpinoyLogger:76 - Properties loaded. Starting testing
+03/21/2018 23:52:51 DEBUG devpinoyLogger:82 - Intialize Suite xlsx
+03/21/2018 23:52:51 DEBUG devpinoyLogger:88 - Check out -- Y
+03/21/2018 23:52:51 DEBUG devpinoyLogger:93 - ******Executing the Suite******Check out
+03/21/2018 23:52:51 DEBUG devpinoyLogger:97 - ShoppingCart -- Y
+03/21/2018 23:52:51 DEBUG devpinoyLogger:101 - Executing the test case -> ShoppingCart
+03/21/2018 23:52:51 DEBUG devpinoyLogger:107 - Iteration number 1
+03/21/2018 23:52:51 DEBUG devpinoyLogger:143 - verificare TCID browserType
