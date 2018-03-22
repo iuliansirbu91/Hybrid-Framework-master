@@ -25,7 +25,8 @@ public class AutoDev {
 	public static void main (String[] args) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InterruptedException {
 		ApplicationUI bucky = new ApplicationUI();
 		bucky.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		bucky.setSize(400,400);
+		bucky.setSize(800,800);
+		bucky.setResizable(true);
 		bucky.setVisible(true);
 		
 		
