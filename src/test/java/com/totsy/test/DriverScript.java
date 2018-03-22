@@ -67,7 +67,7 @@ public class DriverScript {
     }
 
 
-    public void start(String suite) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException{
+    public void start(String suite) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InterruptedException, IOException{
         // initialize the app logs
     	ApplicationUI cfg = new ApplicationUI();
     	CONFIG = cfg.getConfig();
@@ -85,7 +85,7 @@ public class DriverScript {
         // 4) Execute Keywords as many times as
         // number of data sets - set to Y
         APP_LOGS.debug("Intialize Suite xlsx");
-        suiteXLS = new Xls_Reader(suite+"/suite.xlsx");
+        suiteXLS = new Xls_Reader(suite+"/Suite.xlsx");
 
 
         for(currentSuiteID=2;currentSuiteID<=suiteXLS.getRowCount(Constants.TEST_SUITE_SHEET);currentSuiteID++){
@@ -96,7 +96,8 @@ public class DriverScript {
             if(suiteXLS.getCellData(Constants.TEST_SUITE_SHEET, Constants.RUNMODE, currentSuiteID).equals(Constants.RUNMODE_YES)){
                 // execute the test cases in the suite
                 APP_LOGS.debug("******Executing the Suite******"+suiteXLS.getCellData(Constants.TEST_SUITE_SHEET, Constants.Test_Suite_ID, currentSuiteID));
-                currentTestSuiteXLS=new Xls_Reader(suite+"/"+currentTestSuite+".xlsx");
+              //  APP_LOGS.debug(suite+"\\"+currentTestSuite+".xlsx");
+                currentTestSuiteXLS=new Xls_Reader(suite+"\\"+currentTestSuite+".xlsx");
                 // iterate through all the test cases in the suite
                 for(currentTestCaseID=2;currentTestCaseID<=currentTestSuiteXLS.getRowCount("Test Cases");currentTestCaseID++){
                     APP_LOGS.debug(currentTestSuiteXLS.getCellData(Constants.TEST_CASES_SHEET, Constants.TCID, currentTestCaseID)+" -- "+currentTestSuiteXLS.getCellData("Test Cases", "Runmode", currentTestCaseID));
@@ -147,7 +148,7 @@ public class DriverScript {
                     data=currentTestSuiteXLS.getCellData(currentTestCaseName, data.split(Constants.DATA_SPLIT)[1] ,currentTestDataSetID );
                 }else if(data.startsWith(Constants.CONFIG)){
                     //read actual data value from config.properties
-                	APP_LOGS.debug("verificare TCID " + data.split(Constants.DATA_SPLIT)[1]);
+                	APP_LOGS.debug("verificare TCID " + CONFIG);
                     data=CONFIG.getProperty(data.split(Constants.DATA_SPLIT)[1]);
                     APP_LOGS.debug(data);
                 }else{

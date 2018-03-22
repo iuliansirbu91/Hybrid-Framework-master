@@ -29,7 +29,7 @@ public class Keywords {
 
         // Chrome Driver Path
 
-            System.setProperty("webdriver.chrome.driver", "ChromeDriver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\isirbu\\eclipse-workspace\\Hybrid-Framework-master-master-obdev\\ChromeDriver\\chromedriver.exe");
           
 
 
@@ -40,13 +40,13 @@ public class Keywords {
             System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
         }
 
-        APP_LOGS.debug("Opening browser");
+        APP_LOGS.debug("Opening browser" + data);
         if(data.equals("Mozilla"))
             driver=new FirefoxDriver();
         else if(data.equals("IE"))
             driver=new InternetExplorerDriver();
         else if(data.equals("Chrome")){
-      	
+        	//  APP_LOGS.debug("Opening Chrome");
         	driver=new ChromeDriver();
         	driver.manage().window().maximize();
            

@@ -6,12 +6,16 @@ import java.awt.event.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintStream;
+import java.io.OutputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
+
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
 import javax.swing.JOptionPane;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -23,10 +27,14 @@ import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
+import com.totsy.logs.TextAreaOutputStream;
 import com.totsy.test.DriverScript;
 
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.JTextArea;
+import javax.swing.JScrollBar;
+import java.awt.Color;
 
 
 public class ApplicationUI extends JFrame{
@@ -40,23 +48,29 @@ public class ApplicationUI extends JFrame{
 	private JTextField item1;
 	private JTextField item2;
 	private JTextField item3;
+	public JTextArea textArea;
 		
 	private JPasswordField passwordField;
 	private JTextField textField;
 	private JButton btnRun;
+	private FileInputStream fs1;
+	private FileInputStream fs;
+	
+	private PrintStream standardOut;
+	private JScrollPane scrollBar;
 	
 	public ApplicationUI() {
 		super("OBAutoDev");
 	
 	thehandler handler = new thehandler();
-	
+	//JFrame frame = new JFrame();
 	
 		browse1 = new JButton("Browse");
 		browse1.setBounds(22, 11, 67, 23);
 		browse1.addActionListener(handler);
 		
-		item1 = new JTextField("C:\\Users\\Iulian\\Documents\\xls");
-		item1.setBounds(131, 12, 166, 20);
+		item1 = new JTextField("C:\\Users\\isirbu\\Desktop\\Documente\\Automation\\xls");
+		item1.setBounds(131, 12, 482, 20);
 		item1.setEditable(false);
 		item1.addActionListener(handler);
 	
@@ -64,8 +78,8 @@ public class ApplicationUI extends JFrame{
 		browse2.setBounds(22, 45, 67, 23);
 		browse2.addActionListener(handler);
 	
-	item2 = new JTextField("C:\\Users\\Iulian\\Documents\\xls\\or.properties");
-	item2.setBounds(131, 46, 166, 20);
+	item2 = new JTextField("C:\\Users\\isirbu\\Desktop\\Documente\\Automation\\xls\\or.properties");
+	item2.setBounds(131, 46, 482, 20);
 	item2.setEditable(false);
 	getContentPane().setLayout(null);
 	getContentPane().add(browse1);
@@ -78,31 +92,64 @@ public class ApplicationUI extends JFrame{
 	browse3.addActionListener(handler);
 	getContentPane().add(browse3);
 	
-	item3 = new JTextField("C:\\Users\\Iulian\\Documents\\xls\\config.properties");
+	item3 = new JTextField("C:\\Users\\isirbu\\Desktop\\Documente\\Automation\\xls\\config.properties");
 	item3.setBounds(131, 82, 166, 20);
 	item3.setEditable(false);
 	getContentPane().add(item3);
 	
 	btnRun = new JButton("RUN");
-	btnRun.setBounds(131, 129, 166, 23);
+	btnRun.setBackground(Color.GREEN);
+	btnRun.setBounds(131, 129, 482, 23);
 	getContentPane().add(btnRun);
 	btnRun.addActionListener(handler);
-//	passwordField = new JPasswordField("Mypass");
-//	add(passwordField);
+	//JTextArea log = new JTextArea();
+	System.out.println("text de afisat in jarea");
+	
+	textArea = new JTextArea(16,58);
+	textArea.setBounds(28, 163, 585, 244);
+    textArea.setEditable(false);
 	
 	
-
-//	passwordField.addActionListener(handler);
+    PrintStream printStream = new PrintStream(new CustomOutputStream(textArea));
+    
+    // keeps reference of standard output stream
+    standardOut = System.out;
+     
+    // re-assigns standard output stream and error output stream
+    System.setOut(printStream);
+    System.setErr(printStream);
+    getContentPane().add(textArea);
+//	getContentPane().add(textArea);
+	// textArea.setEditable(false);
 	
+		
 	}
 	
-	public Properties getConfig()
+	public Properties getConfig() throws IOException
 		{
+			if (CONFIG == null){
+			fs1 = new FileInputStream(item3.getText());
+			//string = item2.getText();
+			Properties CONFIG2 = new Properties();
+	        CONFIG2.load(fs1);
+	        return CONFIG2;
+	        				
+			}
+			else 
 		    return CONFIG;
 	}
 
-	public Properties getGui()
+	public Properties getGui() throws IOException
 	{
+		if (OR == null){
+		fs = new FileInputStream(item2.getText());
+		//string = item2.getText();
+		Properties OR2 = new Properties();
+        OR2.load(fs1);
+        return OR2;
+        				
+		}
+		else 
 	    return OR;
 }
 	
@@ -112,11 +159,13 @@ public class ApplicationUI extends JFrame{
 		
 		public void actionPerformed(ActionEvent event){
 
+			
+
 			String string = "";
 			if(event.getSource()==browse1){
 				//string = String.format("field 1: %s", event.getActionCommand());
 				
-				  JFileChooser fileChooser = new JFileChooser();
+				  fileChooser = new JFileChooser();
 				   
 		          // For Directory
 		          fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
@@ -133,7 +182,7 @@ public class ApplicationUI extends JFrame{
 			else if (event.getSource()==browse2){
 				
 				//string = String.format("field 1: %s", event.getActionCommand());
-				 JFileChooser fileChooser = new JFileChooser();
+				 fileChooser = new JFileChooser();
 				 // For Directory
 		          fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
 		          // For File
@@ -144,7 +193,7 @@ public class ApplicationUI extends JFrame{
 				
 				//string = String.format("field 2: %s", event.getActionCommand());
 				item2.setText(fileChooser.getSelectedFile().toString());
-				FileInputStream fs;
+				//FileInputStream fs;
 				try {
 					fs = new FileInputStream(item2.getText());
 					 System.out.println(item2.getText());
@@ -179,7 +228,7 @@ public class ApplicationUI extends JFrame{
 				
 				//string = String.format("field 2: %s", event.getActionCommand());
 				item3.setText(fileChooser.getSelectedFile().toString());
-				FileInputStream fs1;
+				
 				try {
 					fs1 = new FileInputStream(item2.getText());
 				
@@ -197,6 +246,9 @@ public class ApplicationUI extends JFrame{
 			else if (event.getSource()==btnRun ){
 				string = String.format("a inceput rularea programului %s", event.getActionCommand());
 				JOptionPane.showMessageDialog(null, string);
+				
+				
+				
 			//	item1.setText(fileChooser.getSelectedFile().toString());
 				
 				string = item1.getText();
@@ -212,14 +264,22 @@ public class ApplicationUI extends JFrame{
 					e.printStackTrace();
 				}
 				try {
+					
 					test.start(string);
+					
+					
 				} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException
 						| NoSuchMethodException | SecurityException | InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				
 			}
+			
+			
 			
 			//JOptionPane.showMessageDialog(null, string);
 			
@@ -239,7 +299,7 @@ public class ApplicationUI extends JFrame{
 			 * 
 			 * */
 		
-			
+		    
 		}
 	}
 }

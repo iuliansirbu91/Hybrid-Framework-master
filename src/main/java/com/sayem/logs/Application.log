@@ -1,12 +1,32 @@
-03/22/2018 00:15:03 DEBUG devpinoyLogger:80 - Hello
-03/22/2018 00:15:03 DEBUG devpinoyLogger:81 - Properties loaded. Starting testing
-03/22/2018 00:15:03 DEBUG devpinoyLogger:87 - Intialize Suite xlsx
-03/22/2018 00:15:04 DEBUG devpinoyLogger:93 - Check out -- Y
-03/22/2018 00:15:04 DEBUG devpinoyLogger:98 - ******Executing the Suite******Check out
-03/22/2018 00:15:04 DEBUG devpinoyLogger:102 - ShoppingCart -- Y
-03/22/2018 00:15:04 DEBUG devpinoyLogger:106 - Executing the test case -> ShoppingCart
-03/22/2018 00:15:04 DEBUG devpinoyLogger:112 - Iteration number 1
-03/22/2018 00:15:04 DEBUG devpinoyLogger:150 - verificare TCID browserType
-03/22/2018 00:15:04 DEBUG devpinoyLogger:152 - 
-03/22/2018 00:15:04 DEBUG devpinoyLogger:159 - openBrowser
-03/22/2018 00:15:04 DEBUG devpinoyLogger:43 - Opening browser
+03/22/2018 15:30:46 DEBUG devpinoyLogger:80 - Hello
+03/22/2018 15:30:46 DEBUG devpinoyLogger:81 - Properties loaded. Starting testing
+03/22/2018 15:30:46 DEBUG devpinoyLogger:87 - Intialize Suite xlsx
+03/22/2018 15:30:46 DEBUG devpinoyLogger:93 - Check out -- Y
+03/22/2018 15:30:46 DEBUG devpinoyLogger:98 - ******Executing the Suite******Check out
+03/22/2018 15:30:46 DEBUG devpinoyLogger:103 - ShoppingCart -- Y
+03/22/2018 15:30:46 DEBUG devpinoyLogger:107 - Executing the test case -> ShoppingCart
+03/22/2018 15:30:46 DEBUG devpinoyLogger:113 - Iteration number 1
+03/22/2018 15:30:46 DEBUG devpinoyLogger:151 - verificare TCID {americanExpress=American Express, visaCard=Visa, advertiser=SANITARIUM, browserType=Chrome, environment=Production, username=admin, implicitwait=20, agency=CARAT AUSTRALIA MEDIA SERVICES, screenshot_error=y, release=Beta 1.3, screenshot_everystep=N, masterCard=MasterCard, password=aD1%pase, testsiteBaseURL=https://swm.onboard-tv.com/onboard/client/, report_file_name=Test_Reports.rar}
+03/22/2018 15:30:46 DEBUG devpinoyLogger:153 - Chrome
+03/22/2018 15:30:46 DEBUG devpinoyLogger:160 - openBrowser
+03/22/2018 15:30:46 DEBUG devpinoyLogger:43 - Opening browserChrome
+03/22/2018 15:30:51 DEBUG devpinoyLogger:168 - PASS
+03/22/2018 15:30:51 DEBUG devpinoyLogger:151 - verificare TCID {americanExpress=American Express, visaCard=Visa, advertiser=SANITARIUM, browserType=Chrome, environment=Production, username=admin, implicitwait=20, agency=CARAT AUSTRALIA MEDIA SERVICES, screenshot_error=y, release=Beta 1.3, screenshot_everystep=N, masterCard=MasterCard, password=aD1%pase, testsiteBaseURL=https://swm.onboard-tv.com/onboard/client/, report_file_name=Test_Reports.rar}
+03/22/2018 15:30:51 DEBUG devpinoyLogger:153 - https://swm.onboard-tv.com/onboard/client/
+03/22/2018 15:30:51 DEBUG devpinoyLogger:160 - navigate
+03/22/2018 15:30:51 DEBUG devpinoyLogger:62 - Navigating to URL
+03/22/2018 15:30:52 DEBUG devpinoyLogger:168 - FAIL -- Not able to navigate
+03/22/2018 15:30:52 DEBUG devpinoyLogger:151 - verificare TCID {americanExpress=American Express, visaCard=Visa, advertiser=SANITARIUM, browserType=Chrome, environment=Production, username=admin, implicitwait=20, agency=CARAT AUSTRALIA MEDIA SERVICES, screenshot_error=y, release=Beta 1.3, screenshot_everystep=N, masterCard=MasterCard, password=aD1%pase, testsiteBaseURL=https://swm.onboard-tv.com/onboard/client/, report_file_name=Test_Reports.rar}
+03/22/2018 15:30:52 DEBUG devpinoyLogger:153 - admin
+03/22/2018 15:30:52 DEBUG devpinoyLogger:160 - writeInInputCss
+03/22/2018 15:30:52 DEBUG devpinoyLogger:345 - Writing in text box
+03/22/2018 15:30:52 DEBUG devpinoyLogger:168 - FAIL Unable to write Cannot find elements when the CSS selector is null.
+03/22/2018 15:30:52 DEBUG devpinoyLogger:151 - verificare TCID {americanExpress=American Express, visaCard=Visa, advertiser=SANITARIUM, browserType=Chrome, environment=Production, username=admin, implicitwait=20, agency=CARAT AUSTRALIA MEDIA SERVICES, screenshot_error=y, release=Beta 1.3, screenshot_everystep=N, masterCard=MasterCard, password=aD1%pase, testsiteBaseURL=https://swm.onboard-tv.com/onboard/client/, report_file_name=Test_Reports.rar}
+03/22/2018 15:30:52 DEBUG devpinoyLogger:153 - aD1%pase
+03/22/2018 15:30:52 DEBUG devpinoyLogger:160 - writeInInputCss
+03/22/2018 15:30:52 DEBUG devpinoyLogger:345 - Writing in text box
+03/22/2018 15:30:52 DEBUG devpinoyLogger:168 - FAIL Unable to write Cannot find elements when the CSS selector is null.
+03/22/2018 15:30:52 DEBUG devpinoyLogger:160 - clickButtonCss
+03/22/2018 15:30:52 DEBUG devpinoyLogger:134 - Clicking on Button
+03/22/2018 15:30:52 DEBUG devpinoyLogger:168 - FAIL -- Not able to click on ButtonCannot find elements when the CSS selector is null.
+03/22/2018 15:30:52 DEBUG devpinoyLogger:160 - pause
