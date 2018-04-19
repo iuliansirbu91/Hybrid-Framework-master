@@ -149,6 +149,7 @@ public class DriverScript {
                 }else if(data.startsWith(Constants.CONFIG)){
                     //read actual data value from config.properties
                 	APP_LOGS.debug("verificare TCID " + CONFIG);
+                	
                     data=CONFIG.getProperty(data.split(Constants.DATA_SPLIT)[1]);
                     APP_LOGS.debug(data);
                 }else{
@@ -158,6 +159,7 @@ public class DriverScript {
                 object=currentTestSuiteXLS.getCellData(Constants.TEST_STEPS_SHEET, Constants.OBJECT,currentTestStepID  );
                 currentKeyword=currentTestSuiteXLS.getCellData(Constants.TEST_STEPS_SHEET, Constants.KEYWORD, currentTestStepID);
                 APP_LOGS.debug(currentKeyword);
+                APP_LOGS.debug(data);
                 // code to execute the keywords as well
                 // reflection API
 

@@ -103,24 +103,14 @@ public class ApplicationUI extends JFrame{
 	getContentPane().add(btnRun);
 	btnRun.addActionListener(handler);
 	//JTextArea log = new JTextArea();
-	System.out.println("text de afisat in jarea");
+//	System.out.println("text de afisat in jarea");
 	
 	textArea = new JTextArea(16,58);
 	textArea.setBounds(28, 163, 585, 244);
     textArea.setEditable(false);
 	
 	
-    PrintStream printStream = new PrintStream(new CustomOutputStream(textArea));
-    
-    // keeps reference of standard output stream
-    standardOut = System.out;
-     
-    // re-assigns standard output stream and error output stream
-    System.setOut(printStream);
-    System.setErr(printStream);
-    getContentPane().add(textArea);
-//	getContentPane().add(textArea);
-	// textArea.setEditable(false);
+   
 	
 		
 	}
